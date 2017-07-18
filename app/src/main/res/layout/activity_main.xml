@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+        <EditText
+                android:id="@+id/username"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:hint="Username"/>
+        <FrameLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="8dp">
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="start|bottom"
+                    android:text="Sort By"/>
+            <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"/>
+        </FrameLayout>
+        <Button
+                android:id="@+id/getReposButton"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Get Repos"/>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+    </LinearLayout>
+    <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_height="40dp"
+            android:layout_width="40dp"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+</FrameLayout>
